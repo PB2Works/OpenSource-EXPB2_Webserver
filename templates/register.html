@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block MainContent %}
+    <main>
+        <p>
+            Registration is not compulsory to play our mod. You can simply play our singleplayer campaign right now without an account. However, if you want to
+            join multiplayer and have access to our multiplayer server (seperated from official PB2), you need to create an account with us.
+            <br><br>
+            NOTE: Use a RANDOM password that you don't use in other accounts. Don't share any sensitive information with us.
+            <br><br>
+            We are hobbyist. Although we will do our best to protect your credentials (encrypt, salt and hash it) - we simply don't have the infrastructure or ability to deal with potential hacking attempts. Therefore, we cannot be responsible for your data.
+        </p>
+        <div id="form_group">
+            <div id="form_account">
+                <h2 class="h2NoMarginTop">REGISTRATION</h2>
+                <span id="status"></span>
+                
+                <div class="labelInputContainer">
+                    <label for="login">Login </label>
+                    <input type="text" id="login">
+                </div>
+                <div class="labelInputContainer">
+                    <label for="password">Password </label>
+                    <input type="password" id="password">
+                </div>
+
+                <button id="registerBtn" onclick="RegisterAccount()">Register</button>
+
+                <div class="selectedImageContainer">
+                    <p>Your DM Skin </p>
+                    <img id="dm_skin_indicator">
+                </div>
+                <div class="selectedImageContainer">
+                    <p>Your TDM Skin </p>
+                    <img id="tdm_skin_indicator">
+                </div>
+
+            </div>
+
+            <!-- Elements will be added in JS side. -->
+            <div>
+                <div id="form_dm_skins">
+                    <h3 id="form_dm_title">Choose your DM Skin</h3>
+                </div>
+    
+                <div id="form_tdm_skins">
+                    <h3 id="form_tdm_title">Choose your TDM Skin</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+	<script src="static/script/skins.js"></script>
+{% endblock %}

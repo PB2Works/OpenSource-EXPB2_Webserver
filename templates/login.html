@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block MainContent %}
+    <main>
+        <div id="login-div">
+            <h2 class="h2NoMarginTop">Login</h2>
+            <span id="status"></span>
+            
+            <div class="labelInputContainer">
+                <label for="login">Login </label>
+                <input type="text" id="login">
+            </div>
+            <div class="labelInputContainer">
+                <label for="password">Password </label>
+                <input type="password" id="password">
+            </div>
+
+            <button id="registerBtn" onclick="LoginAccount()">Login</button>
+        </div>
+    </main>
+{% endblock %}

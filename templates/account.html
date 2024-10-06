@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block MainContent %}
+    <main>
+        <div id="form_group">
+            <div id="form_account">
+                <h2 class="h2NoMarginTop">Account ({{login}})</h2>
+
+				<div class="labelInputContainer">
+                    <label for="nickname">Display Name</label>
+                    <input type="text" id="nickname">
+                </div>
+
+                <span id="status"></span>
+                <button id="registerBtn" onclick="SaveAccount()">Save</button>
+				<button id="logoutBtn" onclick="LogOutAccount()">Log out</button>
+
+                <div class="selectedImageContainer">
+                    <p>Your DM Skin </p>
+                    <img id="dm_skin_indicator">
+                </div>
+                <div class="selectedImageContainer">
+                    <p>Your TDM Skin </p>
+                    <img id="tdm_skin_indicator">
+                </div>
+
+            </div>
+
+            <!-- Elements will be added in JS side. -->
+            <div>
+                <div id="form_dm_skins">
+                    <h3 id="form_dm_title">Choose your DM Skin</h3>
+                </div>
+    
+                <div id="form_tdm_skins">
+                    <h3 id="form_tdm_title">Choose your TDM Skin</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+	<script src="static/script/skins.js"></script>
+	<script>
+		function unescapeHTML(html) {
+            var div = document.createElement("DIV");
+            div.innerHTML = html;
+            return ("innerText" in div) ? div.innerText : div.textContent; // IE | FF
+        }
+
+        document.getElementById("nickname").value = unescapeHTML("{{nickname}}");
+        window.dm_skin = "{{skin1}}";
+        window.tdm_skin = "{{skin2}}";
+        changeSkinIndicators();
+	</script>
+{% endblock %}

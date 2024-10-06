@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>PB2Works Official Website</title>
+        <link rel="shortcut icon" type="image/x-icon" href="static/img/pb2works.ico" />
+        <link rel="stylesheet" href="static/style/index.css">
+		<script src="static/script/account.js"></script>
+
+        <!-- Provides the Archivo font family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Top navigation bar. -->
+        <header>
+            <div class="darkBlurOverlay">
+                <nav>
+                    <ul>
+                        <li><a href="./play">Play!</a></li>
+                        <li><a href="./"><b>About us</b></a></li>
+                        <li><a href="./members">Members</a></li>
+						{% if logged_in %}
+							<li><a href="./account">Account</a></li>
+						{% else %}
+							<li><a href="./register">Register</a></li>
+							<li><a href="./login">Login</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                <div id="titleContainer">
+                    <div>
+                        <h1>We are <b>PB2Works</b>.</h1>
+                        <p>Group of Plazma Burst 2 volunteer modders dedicated to improving Plazma Burst 2.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {% block MainContent %} {% endblock %} 
+    </body>
+</html>

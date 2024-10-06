@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block MainContent %}
+    <main>
+        <p>
+            We are an organization made of volunteer modders that were part of 5-12 community. (Basically 5-12 made PB2Works, how cool is that? In fact, our game save files are named "fivetwelve_burst2", consider yourself enlightened eheh)
+            <br><br>
+            Created under leadership of Lisa, Prosu at 25/01/2023 until about 10/05/2024, we have been spending our free time into improving PB2. In an collaborative effort, we have created a mod that attempts to go above and beyond, addressing the major pain points the game has.
+            <br><br>
+            While PB2Works project is halted, its members are still doing contributions in other areas. In fact, PB2Works members are ALSO members of Official Game (And ALE) Update Team, being responsible for additions of triggers into main game. They are (or were) also ALEI collaborators/maintainer. This WIP serves as a proof of concept of what we can potentially do, to further better the game.
+            <br><br>
+            Let's go over some of our features shall we?
+        </p>
+
+        <section>
+            <h2>STAGE 3D</h2>
+            <p>
+                Stage 3D is our hardware-accelerated renderer. Instead of using CPU like vanilla Plazma Burst 2, we offload rendering to GPU, allowing us to have a much better performance and higher FPS.
+                <br><br>
+                Here, compare them yourself.
+            </p>
+            <div class="mediaTwoContainer">
+                <video class="media" controls>
+                    <source src="static/videos/renderer_comp_flash.mp4" type="video/mp4">
+                </video>
+                <video class="media" controls>
+                    <source src="static/videos/renderer_comp_stage3d.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section>
+            <h2>LUA</h2>
+            <p>
+                Have you ever just...tried to do something complex with triggers, only to realize you need to create millions of objects or actions just simply to have flexibility? Or banged your head on keyboard because your actions do not support variables?
+                <br><br>
+                Yeah, we too. It is pretty annoying. Take a look at this. How many objects do you think was used?
+            </p>
+            <div class="mediaSoloContainer">
+                <video class="media" controls>
+                    <source src="static/videos/lua_showcase_panels.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>
+                If you are one of good map makers, you'd think pretty high, but remember, we are talking about a scripting language here, we have 150 objects in total. 
+                144 doors.... with just 1 lua script animating the entire thing. 0 triggers. 
+                Check this out. And if you want to see the code responsible for animating, check <a href="static/resource/panels.lua" target="_blank">this</a>. Quite simply, no torturing yourself with a billion triggers :)
+            </p>
+            <div class="mediaSoloContainer">
+                <img class="bigMedia" src="static/img/panels_map_objectlist.png" alt="Number of objects"/>
+            </div>
+        </section>
+
+        <section>
+            <h2>Server Sided Triggers</h2>
+            <p>
+                Ever wanted a trigger to run in server? Maybe you are worried about doing cheat engine to change login? And you cannot do anything because 
+                triggers are run in client where...well cheat is done. 
+                <br><br>
+                Enter: Server Sided Triggers.
+                <br><br>
+                They are basically triggers that are run in server rather than players. 
+                By nature of trigger actions, most of actions are not supported in those triggers. 
+                (Move movable A to region B being the example.) But some actions in theory can be done, though only few are actually implemented. 
+                (Because well, the mod is still largely WIP, too bad that progress has been halted.)
+                <br><br>
+                The actual infrastructure is here though, you can run triggers in servers, the only thing that lacks is other actions. (Server hoster can turn those off if they want, players will be informed of this when they enter in map that takes advantage of SST's)
+                <br><br>
+                Here are images (Notice "On Server: Yes").
+            </p>
+            <div class="mediaSoloContainer">
+                <img class="bigMedia" src="static/img/sst_1.png" alt="Server sided trigger 1"/>
+                <div class="mediaTwoContainer">
+                    <img class="bigMedia" src="static/img/sst_2.png" alt="Server sided trigger 2"/>
+                    <img class="bigMedia" src="static/img/sst_3.png" alt="Server sided trigger 3"/>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Self-hostable game servers</h2>
+            <p>
+                Ever wanted to just host your own MP server and call friends from either same network, or with Hamachi/Radmin?
+                <br><br>
+                Well now you can! You just need to compile the game server and connect to it by our PB2 mod. 
+                Yes, it supports connecting to game servers that are not listed by webserver. 
+                Click this to see how our "add game server" menu looks like. And it will be listed in server list :)
+            </p>
+            <div class="mediaTwoContainer">
+                <img class="bigMedia" src="static/img/add_game_server.png" alt="Add game server 1"/>
+                <img class="bigMedia" src="static/img/add_game_server_2.png" alt="Add game server 1"/>
+            </div>
+        </section>
+
+        <section>
+            <h2>Improved ALE</h2>
+            <p>
+                Map makers know that, ALE is inefficient, more objects you have, the laggier ALE. 
+                It gets worse the bigger your map is. We have wrote a WebGL renderer, rewriting ALE's renderer with GPU acceleration. 
+                Why suffer lag when you can have smoothness :) You can also click "test map" button now. 
+                It'll simply launch PB2 client, switch into the map you are working on for you, just like the days when flash is on browsers.
+            </p>
+        </section>
+
+        <section>
+            <h2>Live Map Reload</h2>
+            <p>
+                Imagine that making and testing a multiplayer map you recently made. You make a match, runs some test and that find a bug. You rectify in the ALEI, make another match, then realise it caused another issue or that issue was not fixed. Having to repeat the process all over again, you may have accidentally created a lot of matches. Staff sees a lot of your maps, and jokingly says "ban!"? Yes, that happened to me. If only there was a way to restart a multiplayer map without remaking a new match...
+                <br><br>
+                Yeah, we have that too. You can always request reload of map source if the match you made is "test" match. How cool is that?
+            </p>
+        </section>
+
+        <p>
+            This is non-exhaustive list. There are more features that we did not mentioned here. Interested in contacting us?
+        </p>
+        <section>
+            <h2>Join Us!</h2>
+            <div class="discordContainer">
+                <img class="discordIcon" src="static/img/pb2works.png" alt="PB2 Works Discord Server"/><span>Join the <b>PB2Works</b> discord server <a href="https://discord.gg/AKSyRN27Qr" target="_blank">here!</a></span>
+            </div>
+            <div class="discordContainer">
+                <img class="discordIcon" src="static/img/512.webp" alt="FiveTwelve Discord Server"/><span>Join the <b>FiveTwelve</b> discord server <a href="https://discord.gg/RWmYXhVVRB" target="_blank">here!</a></span>
+            </div>                <div class="discordContainer">
+                <img class="discordIcon" src="static/img/alei.webp" alt="ALEI Discord Server"/><span>Join the <b>ALEI</b> discord server <a href="https://discord.gg/K5jcNEvZ85" target="_blank">here!</a></span>
+            </div>
+        </section>
+    </main>
+{% endblock %}

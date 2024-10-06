@@ -1,0 +1,5 @@
+aiosqlite
+fastapi
+websockets
+uvicorn
+aiohttp

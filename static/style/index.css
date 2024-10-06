@@ -1,0 +1,288 @@
+/* Styles that are applied to whole website. */
+body {
+    margin: 0;
+    background-color: #2D2D2D;
+    /* Texts. */
+    color: #CACACA;
+    font-family: Archivo;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 300;
+    margin: 0;
+    font-size: 48px;
+    padding-bottom: 7px;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+/* Navigation Bar Styling */
+nav {
+    height: 60px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 12% 12% 12% 12% 12%;
+    justify-content: center;
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+}
+
+nav a:active {
+    font-weight: bold;
+}
+
+/* Header Styling */
+header {
+    height: 335px;
+    background-image: url("../img/pb2works.png");
+    background-size: cover;
+}
+
+.darkBlurOverlay{
+    background-color: #00000069;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+#titleContainer {
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 85px);
+    flex-direction: column;
+    text-align: center;
+}
+
+#titleContainer div h1{
+    font-size: 48px;
+    padding-bottom: 7px;
+    color: white;
+}
+
+#titleContainer div p{
+    font-size: 20px;
+}
+
+/* Main Container Styling */
+main {
+    max-width: 930px;
+    margin: 5em auto;
+}
+
+section {
+    margin: 4em 0 7%;
+}
+
+h2 {
+    color: white;
+    font-size: 32px;
+}
+
+.mediaTwoContainer {
+    margin: 3em;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+.mediaSoloContainer {
+    display: grid;
+    margin: 3em;
+    justify-content: center;
+}
+
+.media{
+    width: 445px;
+}
+
+.bigMedia{
+    margin: 2em;
+    max-width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(255, 255, 186);
+}
+
+.discordIcon {
+    width: 128px;
+}
+
+.discordContainer {
+    display: grid;
+    grid-template-columns: 200px auto;
+    align-items: center;
+    margin: 2em 0;
+}
+
+/* Members webpage styling */
+.centeredContainer {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.profileContainer {
+    margin: 4em 0;
+    display: grid;
+    grid-template-columns: 22% auto;
+}
+
+.profileIcon {
+    width: 140px;
+    border-radius: 100%;
+}
+
+.profileContainer h2 {
+    font-size: 40px;
+    margin: 0 0 0.3em;
+}
+
+.quoteSpan {
+    color: #878787;
+    font-style: italic;
+}
+
+.profileContainer p {
+    margin: 1.6em 0 2.5em;
+}
+
+.extensionSpan {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Registration */
+
+#form_group {
+    margin: 3em 0;
+    display: grid;
+    grid-template-columns: 45% auto;
+    column-gap: 40px;
+}
+
+#form_account {
+    position: relative;
+}
+
+.h2NoMarginTop {
+    margin: 0 0 0.83em;
+}
+
+.labelInputContainer {
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.labelInputContainer label {
+    font-size: 24px;
+    color: white;
+}
+
+.labelInputContainer input {
+    background-color: #D9D9D9;
+    height: 32px;
+}
+
+.skin_item img, .skin2_item img {
+    width: 50px;
+}
+
+.skin2_item {
+    margin-right: 0.5em;
+}
+
+#status {
+    display: block;
+    margin-bottom: 1.5em;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    margin: 0 0 1em;
+}
+
+#form_dm_skins {
+    margin-bottom: 2em;
+}
+
+.selectedImageContainer{
+    margin: 2em 0;
+}
+
+.selectedImageContainer p {
+    color: white;
+    margin: 1em 0;
+}
+
+.selectedImageContainer img {
+    width: 80px;
+}
+
+#registerBtn, #logoutBtn {
+    position: absolute;
+    right: 0;
+
+    width: 80px;
+    height: 40px;
+    margin: 1em 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    background-color: #505050;
+    border: none;
+    cursor: pointer;
+}
+
+#logoutBtn {
+	right: 100px;
+}
+
+#registerBtn:active {
+    background-color: #3a3a3a;
+}
+
+/* login */
+#login-div {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
