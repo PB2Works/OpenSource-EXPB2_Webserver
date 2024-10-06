@@ -1,3 +1,6 @@
+# !! THIS IS NOT FULL OPEN SOURCE OF PB2_Webserver. !!
+Some codes that refer to actual PB2 webserver is removed.
+
 # PB2Works Expanded PB2 Authority Webserver
 
 This is webserver, responsible for:
